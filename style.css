@@ -42,3 +42,6 @@ footer { border-top: 1px solid var(--rule); padding-block: 1rem 2rem; font: 13px
   .intro { flex-direction: column; align-items: center; }
   .headshot { width: 150px; height: 150px; }
 }
+dl.years { display: grid; grid-template-columns: 3.5rem 1fr; gap: 0.5rem 1rem; margin: 0; }
+dl.years dt { font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 600; }
+dl.years dd { margin: 0; }
