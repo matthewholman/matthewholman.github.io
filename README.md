@@ -1,4 +1,4 @@
-# matthewholman.github.io
+# matthewholman.org
 
 Personal website of Matthew J. Holman. Plain HTML and CSS, served by GitHub Pages.
 
