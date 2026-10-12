@@ -1,0 +1,44 @@
+:root {
+  --bg: #fbfaf7; --fg: #1d1d1b; --muted: #5d5c57; --rule: #e2dfd7; --link: #1f4e8c; --accent: #8a3b12;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #141413; --fg: #e9e7e1; --muted: #a6a39b; --rule: #33322e; --link: #8fb4ea; --accent: #e0956a; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #141413; --fg: #e9e7e1; --muted: #a6a39b; --rule: #33322e; --link: #8fb4ea; --accent: #e0956a; color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 17px/1.6 "Source Serif 4", Georgia, "Times New Roman", serif;
+  padding-inline: 20px;
+}
+main, header, footer { max-width: 44rem; margin-inline: auto; }
+header { padding-block: 2.5rem 1rem; border-bottom: 1px solid var(--rule); }
+header .name { font-size: 1.9rem; font-weight: 600; letter-spacing: -0.01em; margin: 0; }
+header .name a { color: var(--fg); text-decoration: none; }
+header .role { color: var(--muted); margin: 0.2rem 0 0.9rem; }
+nav { display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; font: 15px/1.4 system-ui, -apple-system, sans-serif; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover, nav a[aria-current] { color: var(--fg); }
+nav a[aria-current] { border-bottom: 2px solid var(--accent); }
+main { padding-block: 1.5rem 3rem; }
+h1 { font-size: 1.4rem; margin: 0.5rem 0 1rem; }
+h2 { font-size: 1.1rem; margin: 2rem 0 0.6rem; color: var(--accent); font-weight: 600; }
+a { color: var(--link); }
+p { margin: 0 0 1rem; }
+ul { padding-left: 1.2rem; }
+li { margin-bottom: 0.45rem; }
+.muted, .note { color: var(--muted); }
+.contact { font: 15px/1.6 system-ui, -apple-system, sans-serif; color: var(--muted); }
+ol.pubs { list-style: none; padding: 0; }
+ol.pubs li { margin-bottom: 0.9rem; }
+.au, .ref { font-size: 0.9rem; color: var(--muted); }
+dl.items dt { font-weight: 600; margin-top: 1rem; }
+dl.items dd { margin: 0.2rem 0 0 0; }
+footer { border-top: 1px solid var(--rule); padding-block: 1rem 2rem; font: 13px/1.5 system-ui, sans-serif; color: var(--muted); }
+.intro { display: flex; gap: 1.6rem; align-items: flex-start; }
+.headshot { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; flex: none; }
+@media (max-width: 560px) {
+  .intro { flex-direction: column; align-items: center; }
+  .headshot { width: 150px; height: 150px; }
+}
